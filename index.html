@@ -66,7 +66,8 @@
             text-align: center;
             color: #fff;
             margin-top: 70px;
-            background-image: url('https://s11.gifyu.com/images/SoO0H.jpg');
+            overflow: hidden;
+            background-image: url('https://s11.gifyu.com/images/SoO0w.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -104,16 +105,17 @@
         .about-section {
             padding: 100px 10px;
             text-align: center;
-            background-image: url('https://s11.gifyu.com/images/SoO0T.jpg');
+            color: #333;
+            background-image: url('https://s11.gifyu.com/images/SoO0K.jpg');
             background-size: cover;
             background-position: center;
-            color: #333;
         }
 
         .about-section h2 {
             font-size: 40px;
             font-family: 'Times New Roman', serif;
             margin-bottom: 20px;
+            color: #fff;
         }
 
         .about-section p {
@@ -121,6 +123,7 @@
             margin: 0 auto;
             font-size: 20px;
             line-height: 1.8;
+            color: #f4f4f4;
         }
 
         .gallery-section {
@@ -225,49 +228,23 @@
             text-decoration: none;
         }
 
-        .footer {
+        footer .social-icons {
             margin-top: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
-        .footer .up-arrow {
-            font-size: 24px;
-            color: #ff4500;
-            margin-bottom: 10px;
-            transition: color 0.3s, transform 0.3s;
+        footer .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
         }
 
-        .footer .up-arrow:hover {
-            color: #e63900;
-            transform: scale(1.2);
+        footer .social-icons img {
+            width: 30px;
+            height: 30px;
+            transition: opacity 0.3s;
         }
 
-        .footer p {
-            margin: 10px 0;
-        }
-
-        .footer .facebook-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: #4267B2;
-            color: #fff;
-            border-radius: 50%;
-            margin-bottom: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .footer .facebook-btn:hover {
-            background-color: #365899;
-        }
-
-        .footer .facebook-text {
-            color: #4267B2;
-            font-size: 14px;
+        footer .social-icons img:hover {
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -317,44 +294,44 @@
 
     <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
-        <div class="contact-info">
-            <p>For inquiries, collaborations, or exhibitions, feel free to reach out to us.</p>
-            <p>Email: info@teampadma.com</p>
-            <p>Phone: +123 456 7890</p>
-        </div>
-        <div class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea rows="5" placeholder="Your Message"></textarea>
+        <form action="https://formspree.io/f/xkgwyjeo" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p>Email: contact@teampadma.com</p>
+            <p>Phone: +1 234 567 890</p>
+            <p>Address: 123 Art Street, Creativity City, 45678</p>
         </div>
     </section>
 
     <footer>
-        <div class="footer">
-            <a href="#home" class="up-arrow"><i class="fas fa-arrow-up"></i></a>
-            <p>আসুন, সবাই একসাথে মানবিকতার পরিচয় দেই। 🌱</p>
-            <a href="https://www.facebook.com/profile.php?id=61564453421912&mibextid=ZbWKwL" class="facebook-link">
-                <div class="facebook-btn">
-                    <i class="fab fa-facebook-f"></i>
-                </div>
-                <span class="facebook-text">Click To Visit Our Page</span>
+        <p>&copy; 2024 Team Padma. All rights reserved. <a href="https://www.facebook.com/TeamPadma" target="_blank">Facebook</a></p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/TeamPadma" target="_blank">
+                <img src="https://s11.gifyu.com/images/SoOad.jpg" alt="Facebook">
             </a>
-            <p class="copyright">&copy; 2024 • Made By ABU TALHA RAJ. All Rights Reserved.</p>
+            <a href="https://www.instagram.com/TeamPadma" target="_blank">
+                <img src="https://s11.gifyu.com/images/SoOaI.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com/TeamPadma" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+            </a>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Smooth Scroll JavaScript -->
     <script>
-        // Smooth Scroll
-        $('a[href*="#"]').on('click', function(e) {
-            e.preventDefault();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
 
-            $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top
-            }, 500, 'linear');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
