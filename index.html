@@ -19,6 +19,7 @@
             background-color: #fafafa;
             line-height: 1.6;
             scroll-behavior: smooth;
+            padding-top: 70px; /* To account for the fixed navbar */
         }
 
         nav {
@@ -61,19 +62,22 @@
         }
 
         .hero-section {
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             height: 100vh;
             text-align: center;
             color: #fff;
-            margin-top: 90px;
             overflow: hidden;
             background-image: url('https://s11.gifyu.com/images/SoO0w.jpg');
             background-size: cover;
             background-position: center;
+            margin-bottom: 0; /* Remove margin */
         }
 
         .hero-content {
-            position: relative;
+            max-width: 90%;
+            margin: auto;
             z-index: 10;
         }
 
@@ -103,12 +107,17 @@
         }
 
         .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             padding: 100px 10px;
             text-align: center;
             color: #333;
             background-image: url('https://s11.gifyu.com/images/SoO0K.jpg');
             background-size: cover;
             background-position: center;
+            margin-bottom: 0; /* Remove margin */
         }
 
         .about-section h2 {
@@ -119,22 +128,29 @@
         }
 
         .about-section p {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 90%;
+            margin: auto;
             font-size: 20px;
             line-height: 1.8;
             color: #f4f4f4;
         }
 
         .gallery-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             padding: 70px 10px;
             text-align: center;
+            margin-bottom: 0; /* Remove margin */
         }
 
         .gallery-section h2 {
             font-size: 36px;
             font-family: 'Times New Roman', serif;
             margin-bottom: 40px;
+            max-width: 90%;
+            margin: auto;
         }
 
         .gallery-container {
@@ -164,16 +180,23 @@
         }
 
         .contact-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             padding: 70px 10px;
             background-color: #1a1a1a;
             color: #f4f4f4;
             text-align: center;
+            margin-bottom: 0; /* Remove margin */
         }
 
         .contact-section h2 {
             font-size: 36px;
             font-family: 'Times New Roman', serif;
             margin-bottom: 30px;
+            max-width: 90%;
+            margin: auto;
         }
 
         .contact-info {
@@ -251,7 +274,7 @@
 <body>
     <nav>
         <div class="logo">
-            <h1></h1>
+            <h1>Team Padma</h1>
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -302,13 +325,11 @@
         </form>
         <div class="contact-info">
             <p>Email: contact@teampadma.com</p>
-            <p></p>
-            <p></p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Team Padma. •Made By ABU TALHA RAJ. All rights reserved.
+        <p>&copy; 2024 Team Padma. • Made By ABU TALHA RAJ. All rights reserved.</p>
         <div class="social-icons">
             <h2>Follow Us On</h2>
             <a href="https://www.facebook.com/TeamPadma" target="_blank">
@@ -336,4 +357,5 @@
         });
     </script>
 </body>
-</html>
+    </html>
+    
